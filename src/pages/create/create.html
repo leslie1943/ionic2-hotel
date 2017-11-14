@@ -1,0 +1,80 @@
+<ion-header>
+  
+   <ion-navbar color="dark">
+     <ion-title>Create a Room</ion-title>
+   </ion-navbar>
+  
+ </ion-header>
+  
+ <ion-content padding>
+  
+     <ion-list no-lines>
+  
+         <ion-item>
+             <ion-label><ion-icon name="key"></ion-icon> Room Type</ion-label>
+             <ion-select [(ngModel)]="type">
+                 <ion-option value="standard">Standard</ion-option>
+                 <ion-option value="studio">Studio</ion-option>
+                 <ion-option value="villa">Villa</ion-option>
+                 <ion-option value="penthouse">Penthouse</ion-option>
+             </ion-select>
+         </ion-item>
+  
+         <ion-item>
+             <ion-label><ion-icon name="people"></ion-icon> Beds</ion-label>
+             <ion-select [(ngModel)]="beds">
+                 <ion-option value="1">1</ion-option>
+                 <ion-option value="2">2</ion-option>
+                 <ion-option value="3">3</ion-option>
+                 <ion-option value="4">4</ion-option>
+                 <ion-option value="5">5</ion-option>
+                 <ion-option value="6">6</ion-option>
+             </ion-select>
+         </ion-item>
+  
+         <ion-item>
+             <ion-label><ion-icon name="people"></ion-icon> Guests</ion-label>
+             <ion-select [(ngModel)]="guests">
+                 <ion-option value="1">1</ion-option>
+                 <ion-option value="2">2</ion-option>
+                 <ion-option value="3">3</ion-option>
+                 <ion-option value="4">4</ion-option>
+                 <ion-option value="5">5</ion-option>
+                 <ion-option value="6">6</ion-option>
+                 <ion-option value="7">7</ion-option>
+                 <ion-option value="8">8</ion-option>
+             </ion-select>
+         </ion-item>
+  
+         <ion-item>
+           <ion-label><ion-icon name="clock"></ion-icon> Check in:</ion-label>
+           <ion-datetime displayFormat="DD/MM/YYYY" max="2020-12-31" pickerFormat="DD MM YYYY" [(ngModel)]="from"></ion-datetime>
+         </ion-item>
+  
+         <ion-item>
+           <ion-label><ion-icon name="alarm"></ion-icon> Check out:</ion-label>
+           <ion-datetime displayFormat="DD/MM/YYYY" max="2020-12-31" pickerFormat="DD MM YYYY" [(ngModel)]="to"></ion-datetime>
+         </ion-item>
+
+         <ion-item>
+            <ion-label><ion-icon name="cache"></ion-icon> Price</ion-label>
+            <ion-select [(ngModel)]="price">
+                <ion-option value="50">50</ion-option>
+                <ion-option value="100">100</ion-option>
+                <ion-option value="120">120</ion-option>
+                <ion-option value="150">150</ion-option>
+                <ion-option value="180">180</ion-option>
+                <ion-option value="200">200</ion-option>
+                <ion-option value="230">230</ion-option>
+                <ion-option value="250">250</ion-option>
+                <ion-option value="300">300</ion-option>
+                <ion-option value="400">400</ion-option>
+                <ion-option value="500">500</ion-option>
+            </ion-select>
+        </ion-item>
+  
+     </ion-list>
+  
+     <button (click)="create()" ion-button full color="light">Create a new room</button>
+  
+ </ion-content>

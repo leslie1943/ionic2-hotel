@@ -1,0 +1,30 @@
+<ion-header>
+
+    <ion-navbar color="dark">
+        <ion-title>Register</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <ion-card>
+        <img src="../../assets/imgs/register.jpg" />
+    </ion-card>
+
+    <ion-list>
+
+        <ion-item>
+            <ion-label fixed>Mobile</ion-label>
+            <ion-input type="text" [(ngModel)]="mobile" placeholder="13478452949"></ion-input></ion-item>
+        <ion-item>
+            <ion-label fixed>Password</ion-label>
+            <ion-input type="Password" [(ngModel)]="password"></ion-input>
+        </ion-item>
+
+
+    </ion-list>
+
+    <button (click)="register()" ion-button full color="primary">Register</button>
+
+</ion-content>
