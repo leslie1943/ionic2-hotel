@@ -4,7 +4,7 @@ import { SearchPage } from '../search/search';
 import { CreatePage } from '../create/create';
 import { LoginPage } from '../login/login';
 import { RegisterPage } from '../register/register';
-
+import {QueryPage} from '../query/query';
 
 
 @Component({
@@ -30,5 +30,9 @@ export class HomePage {
 
   openRegister(){
     this.navCtrl.push(RegisterPage);
+  }
+
+  openQuery(){
+    this.navCtrl.push(QueryPage);
   }
 }

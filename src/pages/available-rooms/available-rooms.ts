@@ -17,13 +17,13 @@ import { BookingPage } from '../booking/booking';
 export class AvailableRoomsPage {
   rooms: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.rooms = this.navParams.get('rooms');
+    this.rooms = this.navParams.get('rooms'); // 'rooms' is the parameter name at the beginning in SearchPage
   }
 
   bookRoom(room) {
     this.navCtrl.push(BookingPage, {
       room: room,
-      details: this.navParams.get('details')
+      details: this.navParams.get('details') //'details' is the parameter name at the beginning in SearchPage
     });
   }
 

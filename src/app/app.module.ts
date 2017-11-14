@@ -14,6 +14,8 @@ import { SearchPage } from '../pages/search/search';
 import { CreatePage } from '../pages/create/create';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { QueryPage } from '../pages/query/query';
+
 
 import { Rooms } from '../providers/rooms';
 import { Users } from '../providers/users';
@@ -28,7 +30,8 @@ import { Users } from '../providers/users';
     SearchPage,
     CreatePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    QueryPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,8 @@ import { Users } from '../providers/users';
     SearchPage,
     CreatePage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    QueryPage
   ],
   providers: [
     StatusBar,
