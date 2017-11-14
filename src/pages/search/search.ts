@@ -68,8 +68,8 @@ export class SearchPage {
         alert.present();
       } else {
         this.navCtrl.push(AvailableRoomsPage, {
-          rooms: data,
-          details: options
+          rooms: data, //send parameters to outside. we can find it in AvailableRoomsPage
+          details: options //send parameters to outside. we can find it in AvailableRoomsPage
         });
       }
     }, (err) => {
