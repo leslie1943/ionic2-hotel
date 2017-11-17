@@ -1,0 +1,23 @@
+<ion-header>
+  
+   <ion-navbar color="dark">
+     <ion-title>Customer List</ion-title>
+   </ion-navbar>
+  
+ </ion-header>
+  
+  
+ <ion-content>
+  
+   <ion-card tappable (click)="viewCutomer(customer)" *ngFor="let customer of customers">
+       <img class="header" src="../../assets/imgs/vip.png" />
+       <!-- [class: card-title-container] is important for display data -->
+       <div class="card-title-container">
+         <p class="card-title"><ion-icon name="call"></ion-icon>{{customer.mobile}}</p>
+
+         <p class="customer-description"><ion-icon name="calendar"></ion-icon> {{customer.reg_date}}</p>
+       </div>
+
+   </ion-card>
+  
+ </ion-content>

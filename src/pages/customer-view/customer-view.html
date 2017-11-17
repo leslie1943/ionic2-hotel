@@ -1,0 +1,38 @@
+<ion-header>
+
+    <ion-navbar color="dark">
+        <ion-title>Customer detail</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <img src="../../assets/imgs/vip.jpeg" />
+    </ion-card>
+
+    <!-- ******* [class: card-title-container] is important for display data ******* -->
+    <div class="card-title-container">
+
+        <p class="card-title">
+            <ion-label>
+                <ion-icon color="primary" name="star"></ion-icon> Customer id: {{customer._id}}
+            </ion-label>
+        </p>
+
+        <p class="card-title">
+            <ion-label>
+                <ion-icon color="primary" name="call"></ion-icon> Customer mobile: {{customer.mobile}}
+            </ion-label>
+        </p>
+
+        <p class="card-title">
+            <ion-label>
+                <ion-icon color="primary" name="calendar"></ion-icon> Customer mobile: {{customer.reg_date}}
+            </ion-label>
+        </p>
+
+    </div>
+
+    <button (click)="back()" full ion-button color="primary">Home</button>
+</ion-content>
