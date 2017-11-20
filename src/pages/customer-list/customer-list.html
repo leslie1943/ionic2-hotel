@@ -9,8 +9,8 @@
   
  <ion-content>
   
-   <ion-card tappable (click)="viewCutomer(customer)" *ngFor="let customer of customers">
-       <img class="header" src="../../assets/imgs/vip.png" />
+   <ion-card  (click)="viewCutomer(customer)" *ngFor="let customer of customers">
+       <!-- <img class="header" src="../../assets/imgs/vip.png" /> -->
        <!-- [class: card-title-container] is important for display data -->
        <div class="card-title-container">
          <p class="card-title"><ion-icon name="call"></ion-icon>{{customer.mobile}}</p>

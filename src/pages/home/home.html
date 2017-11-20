@@ -11,18 +11,20 @@
   <ion-header>
     <ion-navbar>
 
-      <ion-buttons end>
-        <button (click)="openLogin()" ion-button icon-only>
-          <ion-icon color="primary" name="contact"></ion-icon>
-        </button>
 
-        <button (click)="openRegister()" ion-button icon-only>
+      <ion-buttons end>
+          <button  *ngIf="!signed" (click)="openLogin()" ion-button icon-only>
+            <ion-icon color="primary" name="contact"></ion-icon>
+          </button>
+
+
+        <button *ngIf="!signed" (click)="openRegister()" ion-button icon-only>
           <ion-icon color="primary" name="person-add"></ion-icon>
         </button>
 
         <button (click)="openQuery()" ion-button icon-only>
-            <ion-icon color="primary" name="search"></ion-icon>
-          </button>
+          <ion-icon color="primary" name="search"></ion-icon>
+        </button>
 
       </ion-buttons>
 

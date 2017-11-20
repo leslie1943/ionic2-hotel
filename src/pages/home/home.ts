@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { SearchPage } from '../search/search';
 import { CreatePage } from '../create/create';
 import { LoginPage } from '../login/login';
 import { RegisterPage } from '../register/register';
-import {QueryPage} from '../query/query';
+import { QueryPage } from '../query/query';
 
 
 @Component({
@@ -12,27 +12,36 @@ import {QueryPage} from '../query/query';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  constructor(public navCtrl: NavController) {
+  signed: any;
+  user: any;
 
+  constructor(public navCtrl: NavController, public navParam: NavParams) {
+    if (this.navParam.get("signed")) {
+      this.user = this.navParam.get("user");
+      this.signed = this.navParam.get("signed");
+      console.log("[LOG]: Login flag: " + JSON.stringify(this.signed));
+      console.log("[LOG]: Login user: " + JSON.stringify(this.user.mobile));
+      console.log("[LOG]: Login _id: " + JSON.stringify(this.user._id));
+    } 
   }
 
   openSearch() {
     this.navCtrl.push(SearchPage);
   }
 
-  openCreate(){
+  openCreate() {
     this.navCtrl.push(CreatePage);
   }
 
-  openLogin(){
+  openLogin() {
     this.navCtrl.push(LoginPage);
   }
 
-  openRegister(){
+  openRegister() {
     this.navCtrl.push(RegisterPage);
   }
 
-  openQuery(){
+  openQuery() {
     this.navCtrl.push(QueryPage);
   }
 }

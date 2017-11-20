@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { Users } from '../../providers/users';
+import { HomePage } from '../home/home';
 /**
  * Generated class for the Create page.
  *
@@ -60,9 +61,11 @@ export class LoginPage {
           alert.present();
         }
         //Forward home page.
-        //test for git
         else {
-          this.navCtrl.popToRoot();
+          this.navCtrl.push(HomePage,
+            {
+              signed: true, user: data
+            });
         }
       }
     }, (err) => {
