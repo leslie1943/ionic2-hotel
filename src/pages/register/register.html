@@ -9,22 +9,58 @@
 <ion-content padding>
 
     <ion-card>
-        <img src="../../assets/imgs/register.jpg" />
+        <img src="../../assets/imgs/reg.jpg" />
     </ion-card>
 
     <ion-list>
 
         <ion-item>
-            <ion-label fixed>Mobile</ion-label>
-            <ion-input type="text" [(ngModel)]="mobile" placeholder="13478452949"></ion-input></ion-item>
+            <ion-label fixed>Email:</ion-label>
+            <ion-input type="text" [(ngModel)]="email"></ion-input>
+        </ion-item>
+
         <ion-item>
-            <ion-label fixed>Password</ion-label>
+            <ion-label fixed>S/N:</ion-label>
+            <ion-input type="text" [(ngModel)]="serial"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>First name:</ion-label>
+            <ion-input type="text" [(ngModel)]="firstname"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>Last name:</ion-label>
+            <ion-input type="text" [(ngModel)]="lastname"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>Nick name:</ion-label>
+            <ion-input type="text" [(ngModel)]="nick"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>Mobile:</ion-label>
+            <ion-input type="text" [(ngModel)]="mobile"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label><ion-icon name="calendar"></ion-icon>Birth</ion-label>
+                <ion-datetime displayFormat="YYYY-MM-DD" max="2020-12-31" pickerFormat="YYYY-MM-DD" [(ngModel)]="birth"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <ion-label fixed>Password:</ion-label>
             <ion-input type="Password" [(ngModel)]="password"></ion-input>
         </ion-item>
 
+        <ion-item>
+            <ion-label fixed>Re-Password:</ion-label>
+            <ion-input type="Password" [(ngModel)]="re_password"></ion-input>
+        </ion-item>
 
     </ion-list>
 
-    <button (click)="register()" ion-button full color="primary">Register</button>
+    <button (click)="register()" ion-button full color="dark">Register</button>
 
 </ion-content>

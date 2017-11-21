@@ -62,8 +62,7 @@ export class LoginPage {
         }
         //Forward home page.
         else {
-          this.navCtrl.push(HomePage,
-            {
+          this.navCtrl.push(HomePage,{
               signed: true, user: data
             });
         }

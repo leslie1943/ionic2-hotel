@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController,AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { Users } from '../../providers/users';
+import { HomePage } from '../home/home';
+
 /**
  * Generated class for the Create page.
  *
@@ -14,9 +16,17 @@ import { Users } from '../../providers/users';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
+  email:any;
+  serial:any;
+  firstname:any;
+  lastname:any;
+  nick:any;
+  birth:any;
+
 
   mobile: any;
   password: any;
+  re_password:any;
   date: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public userServices: Users, public loadingCtr: LoadingController, public alertCtrl: AlertController) {
@@ -55,7 +65,9 @@ export class RegisterPage {
           buttons: ["OK"]
         });
         alert.present();
-        this.navCtrl.popToRoot();
+        this.navCtrl.push(HomePage, {
+          signed: true, user: data
+        });
       }
     }, (err) => {
       console.log(err);

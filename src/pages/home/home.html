@@ -1,7 +1,8 @@
 <ion-header>
   <ion-navbar color="dark">
+    <!-- <ion-title text-center> -->
     <ion-title>
-      The Hotel
+      Web Solution Enabler Contacts
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -10,36 +11,36 @@
 
   <ion-header>
     <ion-navbar>
-
-
       <ion-buttons end>
-          <button  *ngIf="!signed" (click)="openLogin()" ion-button icon-only>
-            <ion-icon color="primary" name="contact"></ion-icon>
-          </button>
 
+        <button *ngIf="!signed" (click)="openLogin()" ion-button icon-only>
+          <ion-icon color="primary" name="contact"></ion-icon>
+        </button>
 
         <button *ngIf="!signed" (click)="openRegister()" ion-button icon-only>
           <ion-icon color="primary" name="person-add"></ion-icon>
         </button>
 
-        <button (click)="openQuery()" ion-button icon-only>
+        <button *ngIf="signed" (click)="openQuery()" ion-button icon-only>
           <ion-icon color="primary" name="search"></ion-icon>
         </button>
 
+        <button *ngIf="signed" (click)="logout()" ion-button icon-only>
+          <ion-icon color="dark" name="ios-exit"></ion-icon>
+        </button>
+
       </ion-buttons>
-
-
-
     </ion-navbar>
   </ion-header>
 
   <ion-card>
-    <img src="../../assets/imgs/h2.jpeg" />
-
+    <img src="../../assets/imgs/contact.jpg" />
   </ion-card>
 
-
-
+  <ion-card>
+      <img src="../../assets/imgs/hk.jpg" />
+    </ion-card>
+ 
   <!--
   <p>
     Welcome to <strong>The Hotel</strong>, we hope you enjoy your stay.

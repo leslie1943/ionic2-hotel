@@ -22,7 +22,7 @@ export class HomePage {
       console.log("[LOG]: Login flag: " + JSON.stringify(this.signed));
       console.log("[LOG]: Login user: " + JSON.stringify(this.user.mobile));
       console.log("[LOG]: Login _id: " + JSON.stringify(this.user._id));
-    } 
+    }
   }
 
   openSearch() {
@@ -43,5 +43,11 @@ export class HomePage {
 
   openQuery() {
     this.navCtrl.push(QueryPage);
+  }
+
+  logout() {
+    this.navCtrl.push(HomePage, {
+      signed: false, user: {}
+    });
   }
 }
