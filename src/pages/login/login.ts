@@ -15,7 +15,7 @@ import { HomePage } from '../home/home';
   templateUrl: 'login.html',
 })
 export class LoginPage {
-  mobile: any;
+  email: any;
   password: any;
   date: any;
 
@@ -25,7 +25,7 @@ export class LoginPage {
   login() {
     //room model
     let login_user = {
-      mobile: this.mobile,
+      email: this.email,
       password: this.password,
     }
 
