@@ -44,7 +44,7 @@ export class LoginPage {
       if (!data) {
         let alert = this.alertCtrl.create({
           title: 'Opps...',
-          subTitle: 'Sorry, no this mobile',
+          subTitle: 'Sorry, no this user',
           buttons: ['OK']
         });
         alert.present();
