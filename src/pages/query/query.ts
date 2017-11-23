@@ -12,22 +12,31 @@ import { CustomerListPage } from '../customer-list/customer-list';
 export class QueryPage {
 
   mobile: any;
-  reg_date: any;
+  email: any;
+  serial: any;
+  firstname: any;
+  lastname: any;
 
   constructor(public navCtrl: NavController, public navParam: NavParams, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public userService: Users) {
-    this.mobile = "1";
-    this.reg_date = new Date();
+    this.mobile = "";
+    this.email = "";
+    this.serial = "";
+    this.firstname = "";
+    this.lastname = "";
   }
 
   query() {
     let loading = this.loadingCtrl.create({
-      content: "Querying customer..."
+      content: "Querying users..."
     });
     loading.present();
 
     let options = {
       mobile: this.mobile,
-      reg_date: this.reg_date
+      email: this.email,
+      serial: this.serial,
+      firstname: this.firstname,
+      lastname: this.lastname
     }
 
     this.userService.userQuery(options).then(data => {
@@ -42,7 +51,7 @@ export class QueryPage {
         alert.present();
       } else {
         this.navCtrl.push(CustomerListPage, {
-          customers: data,
+          users: data,
           details: options
         });
       }

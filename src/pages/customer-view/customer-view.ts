@@ -15,10 +15,10 @@ import { Users } from '../../providers/users';
   templateUrl: 'customer-view.html',
 })
 export class CustomerViewPage {
-  customer: any;
+  user: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public userService: Users, public loadingCtrl: LoadingController) {
-    this.customer = this.navParams.get('customer');
+    this.user = this.navParams.get('user');
   }
 
   back() {

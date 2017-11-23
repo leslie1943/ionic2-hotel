@@ -15,14 +15,14 @@ import { CustomerViewPage } from '../customer-view/customer-view';
   templateUrl: 'customer-list.html',
 })
 export class CustomerListPage {
-  customers: any;
+  users: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.customers = this.navParams.get("customers");
+    this.users = this.navParams.get("users");
   }
 
-  viewCutomer(customer) {
+  viewUser(user) {
     this.navCtrl.push(CustomerViewPage, {
-      customer: customer,
+      user: user,
       details: this.navParams.get('details')
     });
   }
