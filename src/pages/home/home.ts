@@ -23,19 +23,25 @@ export class HomePage {
     }
   }
 
-
+//Login module
   openLogin() {
     this.navCtrl.push(LoginPage);
   }
 
+  //Register module
   openRegister() {
     this.navCtrl.push(RegisterPage);
   }
 
+  //Query module
   openQuery() {
-    this.navCtrl.push(QueryPage);
+    this.navCtrl.push(QueryPage,{
+      signed:true,
+      user: this.user
+    });
   }
 
+  //Logout module
   logout() {
     this.navCtrl.push(HomePage, {
       signed: false, user: {}

@@ -18,20 +18,8 @@
       <h3><ion-icon name="person"></ion-icon> {{user.firstname + " " + user.lastname}}</h3>
       <h3><ion-icon name="phone-portrait"></ion-icon> {{user.mobile}}</h3>
       <button ion-button clear item-end (click)="viewUser(user)">View</button>
+      <button ion-button clear item-end (click)="deleteUser(user)">Delete</button>
     </ion-item>
   </ion-list>
-
-  <!-- <ion-card (click)="viewCutomer(customer)" *ngFor="let customer of customers"> -->
-  <!-- <img class="header" src="../../assets/imgs/vip.png" /> -->
-  <!-- [class: card-title-container] is important for display data -->
-  <!-- <div class="card-title-container"> -->
-  <!-- <p class="card-title">
-        <ion-icon name="call"></ion-icon>{{customer.mobile}}</p>
-
-      <p class="customer-description">
-        <ion-icon name="calendar"></ion-icon> {{customer.reg_date}}</p>
-    </div>
-
-  </ion-card> -->
 
 </ion-content>

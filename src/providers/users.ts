@@ -52,4 +52,17 @@ export class Users {
     });
   }
 
+  //user delete
+  userDelete(data) {
+    return new Promise(resolve => {
+      let headers = new Headers();
+      headers.append("Content-Type", "application/json");
+      this.http.post("http://localhost:8080/api/user/delete", JSON.stringify(data), { headers: headers })
+        .map(res => res.json())
+        .subscribe(data => {
+          resolve(data);
+        });
+    });
+  }
+
 }

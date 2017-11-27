@@ -1,38 +1,39 @@
 <ion-header>
-
     <ion-navbar color="dark">
         <ion-title>User detail</ion-title>
     </ion-navbar>
 
 </ion-header>
 
-<ion-content>
+<ion-content padding>
     <ion-card>
-        <img src="../../assets/imgs/vip.jpeg" />
+        <img src="../../assets/imgs/ibm.jpg" />
     </ion-card>
 
-    <!-- ******* [class: card-title-container] is important for display data ******* -->
-    <div class="card-title-container">
+    <ion-item>
+        <ion-label fixed>Email</ion-label>
+        <ion-input type="text" value="{{user.email}}" [(ngModel)]="email"></ion-input>
+    </ion-item>
 
-        <p class="card-title">
-            <ion-label>
-                <ion-icon color="primary" name="star"></ion-icon> Id: {{user._id}}
-            </ion-label>
-        </p>
+    <ion-item>
+        <ion-label fixed>Serial No.</ion-label>
+        <ion-input type="text" value="{{user.serial}}" [(ngModel)]="serial"></ion-input>
+    </ion-item>
 
-        <p class="card-title">
-            <ion-label>
-                <ion-icon color="primary" name="call"></ion-icon> Mobile: {{user.mobile}}
-            </ion-label>
-        </p>
+    <ion-item>
+        <ion-label fixed>First name</ion-label>
+        <ion-input type="text" value="{{user.firstname}}" [(ngModel)]="firstname"></ion-input>
+    </ion-item>
 
-        <p class="card-title">
-            <ion-label>
-                <ion-icon color="primary" name="calendar"></ion-icon> Register date: {{user.reg_date}}
-            </ion-label>
-        </p>
+    <ion-item>
+        <ion-label fixed>Last name</ion-label>
+        <ion-input type="text" value="{{user.lastname}}" [(ngModel)]="lastname"></ion-input>
+    </ion-item>
 
-    </div>
+    <ion-item>
+        <ion-label fixed>Mobile</ion-label>
+        <ion-input type="text" value="{{user.mobile}}" [(ngModel)]="mobile"></ion-input>
+    </ion-item>
 
-    <button (click)="back()" full ion-button color="primary">Home</button>
+    <button (click)="back()" full ion-button color="dark">Home</button>
 </ion-content>

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { Users } from '../../providers/users';
+import { HomePage } from '../home/home';
+
 
 /**
  * Generated class for the BookingPage page.
@@ -22,7 +24,9 @@ export class CustomerViewPage {
   }
 
   back() {
-    this.navCtrl.popToRoot();
+    this.navCtrl.push(HomePage,{
+      signed: true, user: this.user
+    });
   }
 
   ionViewDidLoad() {

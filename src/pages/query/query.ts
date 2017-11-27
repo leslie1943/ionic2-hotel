@@ -17,14 +17,22 @@ export class QueryPage {
   firstname: any;
   lastname: any;
 
+  user: any;
+  signed: any;
+
   constructor(public navCtrl: NavController, public navParam: NavParams, public alertCtrl: AlertController, public loadingCtrl: LoadingController, public userService: Users) {
     this.mobile = "";
     this.email = "";
     this.serial = "";
     this.firstname = "";
     this.lastname = "";
+
+    //get parameters from last page.
+    this.user = this.navParam.get("user");
+    this.signed = this.navParam.get("signed");
   }
 
+  //Perform querying.
   query() {
     let loading = this.loadingCtrl.create({
       content: "Querying users..."
@@ -51,6 +59,8 @@ export class QueryPage {
         alert.present();
       } else {
         this.navCtrl.push(CustomerListPage, {
+          signed: this.signed, 
+          user: this.user,
           users: data,
           details: options
         });
