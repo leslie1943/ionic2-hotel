@@ -68,8 +68,8 @@ export class RegisterPage {
         //Register fail.
         if (typeof data["ERROR"] != "undefined") {
           let alert = this.alertCtrl.create({
-            title: "Duplicated",
-            subTitle: "This email has been registerd already.",
+            title: data["ERROR"],
+            subTitle: data["MSG"],
             buttons: ["OK"]
           });
           alert.present();

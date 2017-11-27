@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController,LoadingController, NavParams } from 'ionic-angular';
 import { CustomerViewPage } from '../customer-view/customer-view';
 import { Users } from '../../providers/users';
-import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 import { HomePage } from '../home/home';
-
 
 /**
  * Generated class for the AvailableRoomsPage page.
@@ -40,7 +38,11 @@ export class CustomerListPage {
     });
   }
 
-  //Delete user
+/**
+ * 
+ * @param delUser : very impoartant for server side
+ * server side can use req.body._attributeName which contains in delUser.
+ */
   deleteUser(delUser) {
     //Delete loading.
     let loading = this.loadingCtrl.create({
