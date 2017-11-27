@@ -11,10 +11,10 @@
   <ion-list>
     <ion-item outline *ngFor="let user of users">
       <ion-thumbnail item-start>
-        <img src="../../assets/imgs/list.jpg" />
+        <img src="../../assets/imgs/ibm.jpg" />
       </ion-thumbnail>
       <h2><ion-icon name="mail"></ion-icon> {{user.email}}</h2>
-      <h3><ion-icon name="star"></ion-icon> {{user.serial}}</h3>
+      <h3><ion-icon name="key"></ion-icon> {{user.serial}}</h3>
       <h3><ion-icon name="person"></ion-icon> {{user.firstname + " " + user.lastname}}</h3>
       <h3><ion-icon name="phone-portrait"></ion-icon> {{user.mobile}}</h3>
       <button ion-button clear item-end (click)="viewUser(user)">View</button>

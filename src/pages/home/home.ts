@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { SearchPage } from '../search/search';
-import { CreatePage } from '../create/create';
 import { LoginPage } from '../login/login';
 import { RegisterPage } from '../register/register';
 import { QueryPage } from '../query/query';
@@ -25,13 +23,6 @@ export class HomePage {
     }
   }
 
-  openSearch() {
-    this.navCtrl.push(SearchPage);
-  }
-
-  openCreate() {
-    this.navCtrl.push(CreatePage);
-  }
 
   openLogin() {
     this.navCtrl.push(LoginPage);

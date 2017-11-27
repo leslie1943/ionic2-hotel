@@ -8,10 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { AvailableRoomsPage } from '../pages/available-rooms/available-rooms';
-import { BookingPage } from '../pages/booking/booking';
-import { SearchPage } from '../pages/search/search';
-import { CreatePage } from '../pages/create/create';
+
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { QueryPage } from '../pages/query/query';
@@ -19,7 +16,6 @@ import { CustomerListPage} from '../pages/customer-list/customer-list';
 import { CustomerViewPage} from '../pages/customer-view/customer-view'
 
 
-import { Rooms } from '../providers/rooms';
 import { Users } from '../providers/users';
 
 
@@ -27,10 +23,7 @@ import { Users } from '../providers/users';
   declarations: [
     MyApp,
     HomePage,
-    AvailableRoomsPage,
-    BookingPage,
-    SearchPage,
-    CreatePage,
+
     LoginPage,
     RegisterPage,
     QueryPage,
@@ -46,10 +39,6 @@ import { Users } from '../providers/users';
   entryComponents: [
     MyApp,
     HomePage,
-    AvailableRoomsPage,
-    BookingPage,
-    SearchPage,
-    CreatePage,
     LoginPage,
     RegisterPage,
     QueryPage,
@@ -61,7 +50,7 @@ import { Users } from '../providers/users';
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     //private provider
-    Rooms,Users
+    Users
   ]
 })
 export class AppModule { }
