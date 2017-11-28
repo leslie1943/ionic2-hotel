@@ -27,8 +27,12 @@ export class RegisterPage {
   re_password: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public userServices: Users, public loadingCtr: LoadingController, public alertCtrl: AlertController) {
+    
   }
 
+  /**
+   *  function: registe a new user.
+   */
   register() {
     //user model
     let newUser = {
@@ -50,8 +54,68 @@ export class RegisterPage {
     });
     loading.present();
 
+    //Required field checking - email.
+    if (!newUser["email"]) {
+      loading.dismiss();
+      let alert = this.alertCtrl.create({
+        title: "Email",
+        subTitle: "Missing email",
+        buttons: ["OK"]
+      });
+      alert.present();
+    }
+    //Required field checking - serial.
+    else if (!newUser["serial"]) {
+      loading.dismiss();
+      let alert = this.alertCtrl.create({
+        title: "Serial",
+        subTitle: "Missing serial",
+        buttons: ["OK"]
+      });
+      alert.present();
+    }
+    //Required field checking - firstname.
+    else if (!newUser["firstname"]) {
+      loading.dismiss();
+      let alert = this.alertCtrl.create({
+        title: "First name",
+        subTitle: "Missing First name",
+        buttons: ["OK"]
+      });
+      alert.present();
+    }
+    //Required field checking - lastname.
+    else if (!newUser["lastname"]) {
+      loading.dismiss();
+      let alert = this.alertCtrl.create({
+        title: "Last name",
+        subTitle: "Missing Last name",
+        buttons: ["OK"]
+      });
+      alert.present();
+    }
+    //Required field checking - mobile.
+    else if (!newUser["mobile"]) {
+      loading.dismiss();
+      let alert = this.alertCtrl.create({
+        title: "Mobile",
+        subTitle: "Missing Mobile",
+        buttons: ["OK"]
+      });
+      alert.present();
+    }
+    //Required field checking - password.
+    else if (!newUser["password"]) {
+      loading.dismiss();
+      let alert = this.alertCtrl.create({
+        title: "Password",
+        subTitle: "Missing Password",
+        buttons: ["OK"]
+      });
+      alert.present();
+    }
     //Password checking
-    if (newUser.password !== newUser.re_password) {
+    else if (newUser.password !== newUser.re_password) {
       loading.dismiss();
       let alert = this.alertCtrl.create({
         title: "Password",
