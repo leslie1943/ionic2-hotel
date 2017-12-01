@@ -7,7 +7,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
 
   <ion-header>
     <ion-navbar>
@@ -25,8 +25,12 @@
           <ion-icon color="primary" name="search"></ion-icon>
         </button>
 
+        <button *ngIf="signed" (click)="openProjects()" ion-button icon-only>
+          <ion-icon color="primary" name="settings"></ion-icon>
+        </button>
+
         <button *ngIf="signed" (click)="logout()" ion-button icon-only>
-          <ion-icon color="dark" name="ios-exit"></ion-icon>
+          <ion-icon color="dark" name="open"></ion-icon>
         </button>
 
       </ion-buttons>
@@ -37,8 +41,8 @@
     <img src="../../assets/imgs/contact.jpg" />
   </ion-card>
 
-  <ion-card>
+  <!-- <ion-card>
       <img src="../../assets/imgs/hk.jpg" />
-    </ion-card>
+    </ion-card> -->
 
 </ion-content>

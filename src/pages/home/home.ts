@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { RegisterPage } from '../register/register';
 import { QueryPage } from '../query/query';
+import { ProjectsPage } from '../projects/projects';
+
 
 
 @Component({
@@ -23,7 +25,7 @@ export class HomePage {
     }
   }
 
-//Login module
+  //Login module
   openLogin() {
     this.navCtrl.push(LoginPage);
   }
@@ -33,10 +35,18 @@ export class HomePage {
     this.navCtrl.push(RegisterPage);
   }
 
+  //Open setting
+  openProjects() {
+    this.navCtrl.push(ProjectsPage, {
+      signed: true,
+      user: this.user
+    });
+  }
+
   //Query module
   openQuery() {
-    this.navCtrl.push(QueryPage,{
-      signed:true,
+    this.navCtrl.push(QueryPage, {
+      signed: true,
       user: this.user
     });
   }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController,LoadingController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, LoadingController, NavParams } from 'ionic-angular';
 import { CustomerViewPage } from '../customer-view/customer-view';
 import { Users } from '../../providers/users';
 import { HomePage } from '../home/home';
@@ -29,27 +29,28 @@ export class CustomerListPage {
   }
 
   //View user details.
-  viewUser(user) {
+  viewUser(edit_user) {
     this.navCtrl.push(CustomerViewPage, {
       //send parameters
       signed: this.signed,
-      user: user,
+      user: this.user,
+      edit_user: edit_user,
       details: this.navParams.get('details')
     });
   }
 
-/**
- * 
- * @param delUser : very impoartant for server side
- * server side can use req.body._attributeName which contains in delUser.
- */
+  /**
+   * 
+   * @param delUser : very impoartant for server side
+   * server side can use req.body._attributeName which contains in delUser.
+   */
   deleteUser(delUser) {
     //Delete loading.
     let loading = this.loadingCtrl.create({
       content: "Deleting user..."
     });
     loading.present();
-    
+
     //call user delete service
     this.userServices.userDelete(delUser).then(data => {
       loading.dismiss();

@@ -12,28 +12,35 @@
 
     <ion-item>
         <ion-label fixed>Email</ion-label>
-        <ion-input type="text" value="{{user.email}}" [(ngModel)]="email"></ion-input>
+        <ion-input type="text" value="{{edit_user.email}}" disabled="true" [(ngModel)]="email"></ion-input>
     </ion-item>
 
     <ion-item>
         <ion-label fixed>Serial No.</ion-label>
-        <ion-input type="text" value="{{user.serial}}" [(ngModel)]="serial"></ion-input>
+        <ion-input type="text" value="{{edit_user.serial}}" disabled="false" [(ngModel)]="serial"></ion-input>
     </ion-item>
 
     <ion-item>
         <ion-label fixed>First name</ion-label>
-        <ion-input type="text" value="{{user.firstname}}" [(ngModel)]="firstname"></ion-input>
+        <ion-input type="text" value="{{edit_user.firstname}}" [(ngModel)]="firstname"></ion-input>
     </ion-item>
 
     <ion-item>
         <ion-label fixed>Last name</ion-label>
-        <ion-input type="text" value="{{user.lastname}}" [(ngModel)]="lastname"></ion-input>
+        <ion-input type="text" value="{{edit_user.lastname}}" [(ngModel)]="lastname"></ion-input>
     </ion-item>
 
     <ion-item>
         <ion-label fixed>Mobile</ion-label>
-        <ion-input type="text" value="{{user.mobile}}" [(ngModel)]="mobile"></ion-input>
+        <ion-input type="text" value="{{edit_user.mobile}}" [(ngModel)]="mobile"></ion-input>
     </ion-item>
+
+    <ion-item>
+        <!-- <ion-label fixed>Icon</ion-label> -->
+        <ion-input type="file" [(ngModel)]="icon"></ion-input>
+    </ion-item>
+
+    <button (click)="update(edit_user)" full ion-button color="dark">Update</button>
 
     <button (click)="back()" full ion-button color="dark">Home</button>
 </ion-content>

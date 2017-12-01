@@ -14,6 +14,7 @@ import { RegisterPage } from '../pages/register/register';
 import { QueryPage } from '../pages/query/query';
 import { CustomerListPage} from '../pages/customer-list/customer-list';
 import { CustomerViewPage} from '../pages/customer-view/customer-view'
+import { ProjectsPage } from '../pages/projects/projects';
 
 
 import { Users } from '../providers/users';
@@ -28,7 +29,8 @@ import { Users } from '../providers/users';
     RegisterPage,
     QueryPage,
     CustomerListPage,
-    CustomerViewPage
+    CustomerViewPage,
+    ProjectsPage
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { Users } from '../providers/users';
     RegisterPage,
     QueryPage,
     CustomerListPage,
-    CustomerViewPage
+    CustomerViewPage,
+    ProjectsPage
   ],
   providers: [
     StatusBar,
