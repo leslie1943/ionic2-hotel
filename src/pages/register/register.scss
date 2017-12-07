@@ -1,21 +1,18 @@
-.ios, .md {
+
+ .register-page {
     
-       register-page {
-    
-           ion-content {
-               background-color: map-get($colors, dark);
-           }
-    
-           ion-label {
-               color: #fff;
-           }
-    
-           ion-item {
-               color: #fff;
-               padding: 10px;
-               background-color: #acbebf;
-           }
-    
-       }
-    
-   }
+  ion-content {
+      background-color: map-get($colors, dark);
+  }
+      
+  ion-label {
+      color: #fff;
+  }
+      
+  ion-item {
+      color: black;
+      padding: 10px;
+      background-color:#fff;
+  }
+  
+}

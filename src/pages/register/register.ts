@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { Users } from '../../providers/users';
-import { HomePage } from '../home/home';
+// import { HomePage } from '../home/home';
+import { WelcomePage} from '../welcome/welcome';
 
 /**
  * Generated class for the Create page.
@@ -20,6 +21,7 @@ export class RegisterPage {
   serial: any;
   firstname: any;
   lastname: any;
+  role:any;
   nick: any;
   birth: any;
   mobile: any;
@@ -44,6 +46,7 @@ export class RegisterPage {
       serial: this.serial,
       firstname: this.firstname,
       lastname: this.lastname,
+      role: this.role,
       nick: this.nick,
       birth: this.birth
     }
@@ -146,7 +149,7 @@ export class RegisterPage {
             buttons: ["OK"]
           });
           alert.present();
-          this.navCtrl.push(HomePage, {
+          this.navCtrl.push(WelcomePage, {
             signed: true, user: data
           });
         }

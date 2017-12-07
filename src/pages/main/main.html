@@ -1,0 +1,15 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title>Navigation</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <button ion-item *ngFor="let item of items" (click)="openDetails(item)" ion-start>
+            <!-- <ion-icon [name]="item.icon" [ngStyle]="{'color': item.color}" item-start></ion-icon> -->
+            <ion-icon [name]="item.icon" color="primary" item-start></ion-icon>
+            {{item.title}}
+        </button>
+    </ion-list>
+</ion-content>

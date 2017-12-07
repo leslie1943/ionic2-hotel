@@ -35,12 +35,9 @@
         <ion-input type="text" value="{{edit_user.mobile}}" [(ngModel)]="mobile"></ion-input>
     </ion-item>
 
-    <ion-item>
-        <!-- <ion-label fixed>Icon</ion-label> -->
-        <ion-input type="file" [(ngModel)]="icon"></ion-input>
-    </ion-item>
+    <button (click)="upload()" full ion-button>Upload an image</button>
 
     <button (click)="update(edit_user)" full ion-button color="dark">Update</button>
 
-    <button (click)="back()" full ion-button color="dark">Home</button>
+    <!-- <button (click)="back()" full ion-button color="dark">Home</button> -->
 </ion-content>

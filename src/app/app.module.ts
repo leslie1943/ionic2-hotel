@@ -9,12 +9,22 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-import { LoginPage } from '../pages/login/login';
+// import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { QueryPage } from '../pages/query/query';
-import { CustomerListPage} from '../pages/customer-list/customer-list';
-import { CustomerViewPage} from '../pages/customer-view/customer-view'
+import { CustomerListPage } from '../pages/customer-list/customer-list';
+import { CustomerViewPage } from '../pages/customer-view/customer-view'
 import { ProjectsPage } from '../pages/projects/projects';
+import { WelcomePage } from '../pages/welcome/welcome';
+import { MainPage } from '../pages/main/main';
+
+//Main to pages
+import { MyLeaveRecordPage } from '../pages/my-leave-record/my-leave-record';
+import { NewTemporalLeavePage } from '../pages/new-temporal-leave/new-temporal-leave';
+import { TeamLeavePage } from '../pages/team-leave/team-leave';
+import { OTRequestPage } from '../pages/ot-request/ot-request';
+import { PersonalPage } from '../pages/personal/personal';
+
 
 
 import { Users } from '../providers/users';
@@ -24,13 +34,18 @@ import { Users } from '../providers/users';
   declarations: [
     MyApp,
     HomePage,
-
-    LoginPage,
     RegisterPage,
     QueryPage,
     CustomerListPage,
     CustomerViewPage,
-    ProjectsPage
+    ProjectsPage,
+    WelcomePage,
+    MainPage,
+    MyLeaveRecordPage,
+    NewTemporalLeavePage,
+    TeamLeavePage,
+    OTRequestPage,
+    PersonalPage
   ],
   imports: [
     BrowserModule,
@@ -41,12 +56,18 @@ import { Users } from '../providers/users';
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage,
     RegisterPage,
     QueryPage,
     CustomerListPage,
     CustomerViewPage,
-    ProjectsPage
+    ProjectsPage,
+    WelcomePage,
+    MainPage,
+    MyLeaveRecordPage,
+    NewTemporalLeavePage,
+    TeamLeavePage,
+    OTRequestPage,
+    PersonalPage
   ],
   providers: [
     StatusBar,

@@ -6,7 +6,7 @@
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="register-page">
 
     <ion-card>
         <img src="../../assets/imgs/reg.jpg" />
@@ -35,6 +35,16 @@
         </ion-item>
 
         <ion-item>
+            <ion-label fixed>Role:</ion-label>
+            <ion-select type="text" [(ngModel)]="role">
+                <ion-option value="pm">Project manager</ion-option>
+                <ion-option value="dl">Delivery leader</ion-option>
+                <ion-option value="developer">Developer</ion-option>
+                <ion-option value="tester">Tester</ion-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
             <ion-label fixed>Nick name:</ion-label>
             <ion-input type="text" [(ngModel)]="nick"></ion-input>
         </ion-item>
@@ -46,7 +56,7 @@
 
         <ion-item>
             <ion-label>Birth</ion-label>
-                <ion-datetime displayFormat="YYYY-MM-DD" max="2020-12-31" pickerFormat="YYYY-MM-DD" [(ngModel)]="birth"></ion-datetime>
+            <ion-datetime displayFormat="YYYY-MM-DD" max="2020-12-31" pickerFormat="YYYY-MM-DD" [(ngModel)]="birth"></ion-datetime>
         </ion-item>
 
         <ion-item>

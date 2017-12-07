@@ -7,7 +7,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content >
+<!-- <ion-content>
 
   <ion-header>
     <ion-navbar>
@@ -41,8 +41,42 @@
     <img src="../../assets/imgs/contact.jpg" />
   </ion-card>
 
-  <!-- <ion-card>
+  <ion-card *ngIf="signed">
+    <h1>{{"Welcome, " + user.firstname + " " + user.lastname}} </h1>
+  </ion-card>
+
+
+
+
+  <ion-card>
       <img src="../../assets/imgs/hk.jpg" />
-    </ion-card> -->
+    </ion-card>
+
+</ion-content> -->
+
+<ion-content padding>
+  <ion-card>
+    <img src="../../assets/imgs/ibm.jpg" />
+  </ion-card>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Email</ion-label>
+      <ion-input type="text" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Password</ion-label>
+      <ion-input type="Password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <button large color="primary" ion-button (click)="login()">Login</button>
+        <button large color="primary" ion-button (click)="register()">Register</button>
+    </ion-item>
+
+  </ion-list>
+
 
 </ion-content>

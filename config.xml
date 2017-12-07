@@ -84,4 +84,5 @@
     <engine name="ios" spec="~4.5.3" />
     <allow-navigation href="http://9.112.79.164:8100" />
     <allow-navigation href="http://9.112.79.124:8100" />
+    <plugin name="cordova-plugin-file-transfer" spec="~1.7.0" />
 </widget>

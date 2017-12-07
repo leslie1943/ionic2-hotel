@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { Users } from '../../providers/users';
 import { HomePage } from '../home/home';
-
+import { ActionSheetController } from 'ionic-angular/components/action-sheet/action-sheet-controller';
 
 /**
  * Generated class for the BookingPage page.
- *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
@@ -17,27 +16,23 @@ import { HomePage } from '../home/home';
   templateUrl: 'customer-view.html',
 })
 export class CustomerViewPage {
+
   firstname: any;
   lastname: any;
   mobile: any;
-  icon:any;
-
   user: any;
   edit_user: any;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public userService: Users, public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public userService: Users, public loadingCtrl: LoadingController, public alertCtrl: AlertController,public actionCtrl: ActionSheetController) {
     this.user = this.navParams.get('user');
     this.edit_user = this.navParams.get('edit_user');
   }
 
-
   //update edit user.
   update(edit_user) {
-    //update the edit user. 
-
     edit_user["firstname"] = this.firstname;
     edit_user["lastname"] = this.lastname;
     edit_user["mobile"] = this.mobile;
-    edit_user["icon"] = this.icon;
 
     //loading
     let loading = this.loadingCtrl.create({
@@ -90,6 +85,41 @@ export class CustomerViewPage {
         });
       });
     }
+  }
+
+  //upload
+  upload(){
+    let upload_sheet = this.actionCtrl.create({
+      title: '',
+      cssClass: 'customer-view-page',
+      
+      buttons: [
+        //Upload
+        {
+          text: 'Upload a image',
+          role: 'upload',
+          icon: 'md-photos',
+          handler: ()=>{
+            console.log("upload a image");
+          }
+        },
+        {
+          text: 'Take a photo',
+          role: 'take',
+          icon: 'camera',
+          
+          handler: ()=>{
+            console.log("take a photo");
+          }
+        },
+        {
+          text: 'Close',
+          role: 'close',
+          icon: 'close',
+        }
+      ]
+    });
+    upload_sheet.present();
   }
   //back to home.
   back() {
