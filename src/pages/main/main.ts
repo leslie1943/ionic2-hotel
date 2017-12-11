@@ -33,27 +33,32 @@ export class MainPage {
       {
         'title': 'My leave record',
         'icon': 'walk',
-        'type': 'my_leave_record'
+        'type': 'my_leave_record',
+        'color': '#C0E6FF'
       },
       {
         'title': 'New temporal leave',
         'icon': 'create',
-        'type': 'new_temp_leave'
+        'type': 'new_temp_leave',
+        'color': '#C8F08F'
       },
       {
         'title': 'Team leave',
         'icon': 'people',
-        'type': 'team_leave'
+        'type': 'team_leave',
+        'color': '#FFD2FF'
       },
       {
         'title': 'OT request',
         'icon': 'clock',
-        'type': 'ot_request'
+        'type': 'ot_request',
+        'color': '#FDE876'
       },
       {
         'title': 'Personal',
         'icon': 'contact',
-        'type': 'personal'
+        'type': 'personal',
+        'color': '#576161'
       }
     ];
   }

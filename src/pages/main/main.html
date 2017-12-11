@@ -6,10 +6,22 @@
 
 <ion-content>
     <ion-list>
-        <button ion-item *ngFor="let item of items" (click)="openDetails(item)" ion-start>
+        <button ion-item *ngFor="let item of items"  (click)="openDetails(item)" icon-start detail-push>
             <!-- <ion-icon [name]="item.icon" [ngStyle]="{'color': item.color}" item-start></ion-icon> -->
-            <ion-icon [name]="item.icon" color="primary" item-start></ion-icon>
+            <ion-icon [name]="item.icon" color="primary" item-start></ion-icon> 
             {{item.title}}
         </button>
     </ion-list>
 </ion-content>
+
+<!-- 
+    The attribute ion-item should be added to a <button> when the item can be clicked or tapped. It should be added to an <a> element when the item needs to contain a href. It can be added as an attribute to any element to take on the item styling.
+
+    <button ion-item (click)="buttonClick()">
+        Button Item
+    </button>
+            
+    <a ion-item href="https://www.ionicframework.com">
+        Anchor Item
+    </a> 
+-->
