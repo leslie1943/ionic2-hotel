@@ -25,9 +25,13 @@ import { TeamLeavePage } from '../pages/team-leave/team-leave';
 import { OTRequestPage } from '../pages/ot-request/ot-request';
 import { PersonalPage } from '../pages/personal/personal';
 
+//My Leave Record Page to
+import { NewLeavePage } from '../pages/new-leave/new-leave';
 
 
+//Providers
 import { Users } from '../providers/users';
+import { Leaves } from '../providers/leaves';
 
 
 @NgModule({
@@ -45,7 +49,8 @@ import { Users } from '../providers/users';
     NewTemporalLeavePage,
     TeamLeavePage,
     OTRequestPage,
-    PersonalPage
+    PersonalPage,
+    NewLeavePage
   ],
   imports: [
     BrowserModule,
@@ -67,14 +72,15 @@ import { Users } from '../providers/users';
     NewTemporalLeavePage,
     TeamLeavePage,
     OTRequestPage,
-    PersonalPage
+    PersonalPage,
+    NewLeavePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     //private provider
-    Users
+    Users,Leaves
   ]
 })
 export class AppModule { }

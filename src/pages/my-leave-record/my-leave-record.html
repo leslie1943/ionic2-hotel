@@ -5,5 +5,71 @@
 </ion-header>
 
 <ion-content>
-    <p>My leave record</p>
+    <ion-item>
+        <button large color="dark" ion-button (click)="new_leave()" outline icon-right>New leave
+            <ion-icon name="notifications"></ion-icon>
+        </button>
+
+        <button large color="dark" ion-button (click)="new_training()" outline icon-right>New training notice
+            <ion-icon name="alarm"></ion-icon>
+        </button>
+
+        <button large color="dark" ion-button (click)="my_training()" outline icon-right>My training notice
+            <ion-icon name="alarm"></ion-icon>
+        </button>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Leave From Date:</ion-label>
+        <ion-datetime displayFormat="YYYY-MM-DD" max="2020-12-31" pickerFormat="YYYY-MM-DD" [(ngModel)]="leave_date_from"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Leave To Date:</ion-label>
+        <ion-datetime displayFormat="YYYY-MM-DD" max="2020-12-31" pickerFormat="YYYY-MM-DD" [(ngModel)]="leave_date_to"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Leave Type:</ion-label>
+        <ion-select type="text" [(ngModel)]="leave_type">
+            <ion-option value="common">Common leave</ion-option>
+            <ion-option value="temporal">Temporal leave</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Status:</ion-label>
+        <ion-select type="text" [(ngModel)]="leave_status">
+            <ion-option value="closed">Closed</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+        <button color="primary" ion-button icon-left>
+            <ion-icon name="search"></ion-icon>
+            Search
+        </button>
+    </ion-item>
+
+    <ion-list>
+
+        <ion-grid>
+            <ion-row justify-content-start>
+                <ion-col>Request ID</ion-col>
+                <ion-col>Requester</ion-col>
+                <ion-col>PM</ion-col>
+                <ion-col>Leave type</ion-col>
+                <ion-col>Request date</ion-col>
+                <ion-col>Leave date</ion-col>
+                <ion-col>Leave hour(s)</ion-col>
+                <ion-col>Status</ion-col>
+            </ion-row>
+
+           <!-- <ion-row *ngFor="let leave of leaves">
+
+            </ion-row> -->
+
+        </ion-grid>
+    </ion-list>
+
 </ion-content>

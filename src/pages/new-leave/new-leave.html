@@ -1,0 +1,84 @@
+<ion-header>
+    <ion-navbar color="dark">
+        <ion-title>New leave</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <!-- Request ID -->
+    <ion-item>
+        <ion-label>Request ID:</ion-label>
+        <ion-input disabled="true" type="text" [(ngModel)]="leave_id"></ion-input>
+    </ion-item>
+
+    <!-- Requester -->
+    <ion-item>
+        <ion-label>Requester:</ion-label>
+        <ion-input disabled="true" type="text" [(ngModel)]="leave_requester"></ion-input>
+    </ion-item>
+
+    <!-- PM -->
+    <ion-item>
+        <ion-label>PM:</ion-label>
+        <ion-input disabled="true" type="text" [(ngModel)]="leave_pm"></ion-input>
+    </ion-item>
+
+    <!-- Leave type -->
+    <ion-item>
+        <ion-label>Leave type:</ion-label>
+        <ion-select type="text" [(ngModel)]="leave_type">
+            <ion-option value="annual">Annual leave</ion-option>
+            <ion-option value="other">Other leave</ion-option>
+            <ion-option value="compensatory">Compensatory leave</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <!-- From date -->
+    <ion-item>
+        <ion-label>From date:</ion-label>
+        <ion-datetime displayFormat="YYYY-MM-DD" max="2020-12-31" pickerFormat="YYYY-MM-DD" [(ngModel)]="leave_from"></ion-datetime>
+    </ion-item>
+
+    <!-- To date -->
+    <ion-item>
+        <ion-label>From date:</ion-label>
+        <ion-datetime displayFormat="YYYY-MM-DD" max="2020-12-31" pickerFormat="YYYY-MM-DD" [(ngModel)]="leave_to"></ion-datetime>
+    </ion-item>
+
+    <!-- Total leave days -->
+    <ion-item>
+        <ion-label>Total leave days:</ion-label>
+        <ion-input type="text" [(ngModel)]="leave_days"></ion-input>
+    </ion-item>
+
+    <!-- Backup person -->
+    <ion-item>
+        <ion-label>Backup person :</ion-label>
+        <ion-select type="text" [(ngModel)]="leave_backup">
+            <ion-option value="Xue lian Leng">Xue lian Leng</ion-option>
+            <ion-option value="Hui ying Wang">Hui ying Wang</ion-option>
+            <ion-option value="Jia Song">Jia Song</ion-option>
+        </ion-select>
+
+    </ion-item>
+
+    <!-- Urgent contact number -->
+    <ion-item>
+        <ion-label>Urgent contact number:</ion-label>
+        <ion-input type="text" [(ngModel)]="leave_contact"></ion-input>
+    </ion-item>
+
+    <!-- Reason -->
+    <ion-item>
+        <ion-label>Reason:</ion-label>
+        <ion-textarea multiline="5" type="text" [(ngModel)]="leave_reason"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+        <button large color="primary" ion-button (click)="create_leave()">
+            Create
+        </button>
+    </ion-item>
+
+</ion-content>

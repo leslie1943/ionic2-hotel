@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
-
+import {NewLeavePage} from '../new-leave/new-leave';
 /**
  * Generated class for the Create page.
  *
@@ -21,6 +21,13 @@ export class MyLeaveRecordPage {
     console.log("[LOG]: Login _id: " + JSON.stringify(this.navParams.get("user")._id));
   }
 
+
+  new_leave(){
+    this.navCtrl.push(NewLeavePage,{
+      user: this.navParams.get("user"),
+      signed: this.navParams.get("signed")
+    });
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad MyLeaveRecordPage');
   }
